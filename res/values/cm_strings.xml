@@ -35,6 +35,7 @@
     <!-- My Phone Number -->
     <string name="phone_number_label">My phone number</string>
     <string name="phone_number_summary">Set the phone number for this device</string>
+    <string name="set_my_number_failed">Failed to set phone number</string>
     <string name="msisdn_alpha_tag" translatable="false">Voice Line 1</string>
 
     <!-- Toasts for various transient network events -->
@@ -187,6 +188,7 @@
 
     <!-- FDN settings: error message displayed in a popup (toast) -->
     <string name="fdn_invalid_number_cm">FDN wasn\'t updated because the number is empty or exceeds 20 digits.</string>
+    <string name="fdn_service_unavailable">FDN service is not available.</string>
 
     <!-- Title of the activity shown for Exporting contacts to SIM.  -->
     <string name="exportContacts">Exporting contacts to SIM card\u2026</string>
@@ -240,4 +242,10 @@
 
     <!-- Error message displayed on SIM Network Depersonalization panel with # of retries remaining -->
     <string name="unlock_failed_remaining_retries">Unlock request unsuccessful, %1$d retries remaining.</string>
+
+    <!-- Call forward: IMS: Media tag support -->
+    <string name="labelCFType">Call forwarding settings</string>
+    <string name="labelCFVoice">Voice</string>
+    <string name="labelCFVideo">Video</string>
+    <string name="call_forward_option">Call forwarding options</string>
 </resources>

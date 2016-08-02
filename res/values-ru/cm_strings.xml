@@ -33,6 +33,7 @@
   <!-- My Phone Number -->
   <string name="phone_number_label">Мой номер телефона</string>
   <string name="phone_number_summary">Задать телефонный номер для этого устройства</string>
+  <string name="set_my_number_failed">Не удалось задать номер телефона</string>
   <!-- Toasts for various transient network events -->
   <!-- Toast text for Unconditional Call Forwarding enabled  -->
   <string name="call_notif_unconditionalCF">Включена безусловная переадресация вызова</string>
@@ -149,6 +150,7 @@
   <string name="cb_psw_dont_match">Пароли не совпадают</string>
   <!-- FDN settings: error message displayed in a popup (toast) -->
   <string name="fdn_invalid_number_cm">FDN не был обновлен, потому что номер не набран, или превышает 20 цифр.</string>
+  <string name="fdn_service_unavailable">Служба FDN недоступна.</string>
   <!-- Title of the activity shown for Exporting contacts to SIM.  -->
   <string name="exportContacts">Экспорт контактов на SIM-карту\u2026</string>
   <!-- Title of the List shown for SIM Contacts Management Activity.  -->
@@ -193,4 +195,10 @@
   <string name="choose_network_mode_title">Выбор режима сети</string>
   <string name="choose_network_mode_system_default">По умолчанию (системн.)</string>
   <!-- Error message displayed on SIM Network Depersonalization panel with # of retries remaining -->
+  <string name="unlock_failed_remaining_retries">Неудачный запрос на разблокировку, осталось %1$d попыток.</string>
+  <!-- Call forward: IMS: Media tag support -->
+  <string name="labelCFType">Настройки переадресации вызовов</string>
+  <string name="labelCFVoice">Голос</string>
+  <string name="labelCFVideo">Видео</string>
+  <string name="call_forward_option">Параметры переадресации вызовов</string>
 </resources>

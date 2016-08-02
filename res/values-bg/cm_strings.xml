@@ -33,6 +33,7 @@
   <!-- My Phone Number -->
   <string name="phone_number_label">Моят телефонен номер</string>
   <string name="phone_number_summary">Задайте телефонен номер за това устройство</string>
+  <string name="set_my_number_failed">Неуспешно задаване на телефонен номер</string>
   <!-- Toasts for various transient network events -->
   <!-- Toast text for Unconditional Call Forwarding enabled  -->
   <string name="call_notif_unconditionalCF">Безусловно пренасочване активирано</string>
@@ -138,17 +139,18 @@
     <item>Всички</item>
   </string-array>
   <string name="call_barring_incoming">Забранени входящи разговори</string>
-  <string name="input_password">Въведете паролата си</string>
+  <string name="input_password">Въведете вашата парола</string>
   <string name="invalidPsw">Въведете валидна парола (4-8 цифри)</string>
   <string name="labelCbCancelAll">Забраняване на повиквания</string>
   <string name="labelCbChangePassword">Смяна на паролата</string>
   <string name="psw_enter_old">Стара парола</string>
   <string name="psw_enter_new">Нова парола</string>
-  <string name="psw_reenter_new">Въведете отново паролата си</string>
+  <string name="psw_reenter_new">Въведете отново вашата парола</string>
   <string name="no_call_barring">Спиране на забраната за обаждания</string>
   <string name="cb_psw_dont_match">Паролите не съвпадат</string>
   <!-- FDN settings: error message displayed in a popup (toast) -->
   <string name="fdn_invalid_number_cm">FDN не беше актуализирана, защото номерът е празен или превишава 20 цифри.</string>
+  <string name="fdn_service_unavailable">FDN услугата не е налична.</string>
   <!-- Title of the activity shown for Exporting contacts to SIM.  -->
   <string name="exportContacts">Експортиране на контакти в СИМ карта\u2026</string>
   <!-- Title of the List shown for SIM Contacts Management Activity.  -->
@@ -194,4 +196,9 @@
   <string name="choose_network_mode_system_default">Система по подразбиране</string>
   <!-- Error message displayed on SIM Network Depersonalization panel with # of retries remaining -->
   <string name="unlock_failed_remaining_retries">Неуспешно отключване, отават Ви %1$d опита.</string>
+  <!-- Call forward: IMS: Media tag support -->
+  <string name="labelCFType">Настройки за препращане на повикване</string>
+  <string name="labelCFVoice">Глас</string>
+  <string name="labelCFVideo">Видео</string>
+  <string name="call_forward_option">Опции за препращане на повикване</string>
 </resources>

@@ -19,6 +19,7 @@ package com.android.services.telephony;
 import android.content.Context;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
+import android.os.Bundle;
 import android.telecom.Conference;
 import android.telecom.ConferenceParticipant;
 import android.telecom.Connection.VideoProvider;
@@ -183,6 +184,12 @@ public class ImsConference extends Conference {
         public void onStatusHintsChanged(Connection c, StatusHints statusHints) {
             Log.v(this, "onStatusHintsChanged");
             updateStatusHints();
+        }
+
+        @Override
+        public void onExtrasChanged(Connection c, Bundle extras) {
+            Log.v(this, "onExtrasChanged: c=" + c + " Extras=" + extras);
+            setExtras(extras);
         }
     };
 
@@ -803,6 +810,8 @@ public class ImsConference extends Conference {
                     PhoneUtils.makePstnPhoneAccountHandle(mConferenceHost.getPhone());
             if (mConferenceHost.getPhone().getPhoneType() == PhoneConstants.PHONE_TYPE_GSM) {
                 GsmConnection c = new GsmConnection(originalConnection, false);
+                // This is a newly created conference connection as a result of SRVCC
+                c.setConferenceSupported(true);
                 c.updateState();
                 // Copy the connect time from the conferenceHost
                 c.setConnectTimeMillis(mConferenceHost.getConnectTimeMillis());

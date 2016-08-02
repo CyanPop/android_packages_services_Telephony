@@ -149,6 +149,7 @@
   <string name="cb_psw_dont_match">Las contraseñas no coinciden</string>
   <!-- FDN settings: error message displayed in a popup (toast) -->
   <string name="fdn_invalid_number_cm">FDN no fue actualizado porque el número está vacío o supera los 20 dígitos.</string>
+  <string name="fdn_service_unavailable">El servicio FDN no está disponible.</string>
   <!-- Title of the activity shown for Exporting contacts to SIM.  -->
   <string name="exportContacts">Exportando contactos a la tarjeta SIM\u2026</string>
   <!-- Title of the List shown for SIM Contacts Management Activity.  -->
@@ -193,4 +194,6 @@
   <string name="choose_network_mode_title">Elige el modo de red</string>
   <string name="choose_network_mode_system_default">Utilizar valores predeterminados</string>
   <!-- Error message displayed on SIM Network Depersonalization panel with # of retries remaining -->
+  <string name="unlock_failed_remaining_retries">Petición de desbloqueo incorrecta, quedan %1$d intentos.</string>
+  <!-- Call forward: IMS: Media tag support -->
 </resources>

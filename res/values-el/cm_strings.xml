@@ -33,6 +33,7 @@
   <!-- My Phone Number -->
   <string name="phone_number_label">Ο αριθμός μου</string>
   <string name="phone_number_summary">Ορίστε τον αριθμό τηλεφώνου για αυτή τη συσκευή</string>
+  <string name="set_my_number_failed">Ο ορισμός του τηλεφωνικού αριθμού απέτυχε</string>
   <!-- Toasts for various transient network events -->
   <!-- Toast text for Unconditional Call Forwarding enabled  -->
   <string name="call_notif_unconditionalCF">Προώθηση κλήσεων άνευ όρων ενεργή</string>
@@ -149,6 +150,7 @@
   <string name="cb_psw_dont_match">Οι κωδικοί πρόσβασης δεν ταιριάζουν</string>
   <!-- FDN settings: error message displayed in a popup (toast) -->
   <string name="fdn_invalid_number_cm">Το FDN δεν ενημερώθηκε, επειδή ο αριθμός είναι κενός ή υπερβαίνει τα 20 ψηφία.</string>
+  <string name="fdn_service_unavailable">Η υπηρεσία FDN δεν είναι διαθέσιμη.</string>
   <!-- Title of the activity shown for Exporting contacts to SIM.  -->
   <string name="exportContacts">Εξαγωγή επαφών στην κάρτα SIM\u2026</string>
   <!-- Title of the List shown for SIM Contacts Management Activity.  -->
@@ -194,4 +196,9 @@
   <string name="choose_network_mode_system_default">Προεπιλογή συστήματος</string>
   <!-- Error message displayed on SIM Network Depersonalization panel with # of retries remaining -->
   <string name="unlock_failed_remaining_retries">Ανεπιτυχές αίτημα ξεκλειδώματος δικτύου, απομένουν %1$d προσπάθειες.</string>
+  <!-- Call forward: IMS: Media tag support -->
+  <string name="labelCFType">Ρυθμίσεις προώθησης κλήσεων</string>
+  <string name="labelCFVoice">Φωνή</string>
+  <string name="labelCFVideo">Βίντεο</string>
+  <string name="call_forward_option">Επιλογές προώθησης κλήσεων</string>
 </resources>

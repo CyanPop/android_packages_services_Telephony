@@ -117,8 +117,9 @@ public class NetworkSetting extends PreferenceActivity
 
                     ar = (AsyncResult) msg.obj;
                     if (ar.exception != null) {
-                        if (DBG) log("manual network selection: failed!");
+                        if (DBG) log("manual network selection: failed! switch back to auto ");
                         displayNetworkSelectionFailed(ar.exception);
+                        selectNetworkAutomatic();
                     } else {
                         if (DBG) log("manual network selection: succeeded!");
                         displayNetworkSelectionSucceeded();
@@ -151,8 +152,6 @@ public class NetworkSetting extends PreferenceActivity
 
                     break;
             }
-
-            return;
         }
     };
 
@@ -245,13 +244,6 @@ public class NetworkSetting extends PreferenceActivity
         }
     }
 
-    public String getNormalizedCarrierName(OperatorInfo ni) {
-        if (ni != null) {
-            return ni.getOperatorAlphaLong() + " (" + ni.getOperatorNumeric() + ")";
-        }
-        return null;
-    }
-
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -272,13 +264,16 @@ public class NetworkSetting extends PreferenceActivity
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        int subId;
+        int subId = SubscriptionManager.INVALID_SUBSCRIPTION_ID;
         Intent intent = getIntent();
         if (intent != null && intent.getExtras() != null) {
             subId = intent.getExtras().getInt(GsmUmtsOptions.EXTRA_SUB_ID);
-            if (SubscriptionManager.isValidSubscriptionId(subId)) {
-                mPhoneId = SubscriptionManager.getPhoneId(subId);
-            }
+        } else {
+            subId = SubscriptionManager.getDefaultSubId();
+        }
+
+        if (SubscriptionManager.isValidSubscriptionId(subId)) {
+            mPhoneId = SubscriptionManager.getPhoneId(subId);
         }
 
         mNetworkList = (PreferenceGroup) getPreferenceScreen().findPreference(LIST_NETWORKS_KEY);
@@ -330,12 +325,6 @@ public class NetworkSetting extends PreferenceActivity
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    private void enableSearchButton (boolean enabled) {
-        if (mSearchButton != null) {
-            mSearchButton.setEnabled(enabled);
-        }
     }
 
     @Override
@@ -601,8 +590,16 @@ public class NetworkSetting extends PreferenceActivity
             BidiFormatter bidiFormatter = BidiFormatter.getInstance();
             title = bidiFormatter.unicodeWrap(ni.getOperatorNumeric(), TextDirectionHeuristics.LTR);
         }
-        if (!ni.getRadioTech().equals(""))
-            title += " " + mRatMap.get(ni.getRadioTech());
+
+        String radioTech = ni.getRadioTech();
+        if (!radioTech.equals("")) {
+            String radioString = mRatMap.get(radioTech);
+
+            // if the carrier already contains the used technology in it's name, don't add it again
+            if (TextUtils.indexOf(title, radioString) < 0) {
+                title += " " + radioString;
+            }
+        }
 
         return title;
     }

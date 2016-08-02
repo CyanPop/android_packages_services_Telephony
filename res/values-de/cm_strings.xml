@@ -33,6 +33,7 @@
   <!-- My Phone Number -->
   <string name="phone_number_label">Meine Rufnummer</string>
   <string name="phone_number_summary">Rufnummer für dieses Gerät setzen</string>
+  <string name="set_my_number_failed">Fehler beim Festlegen der Telefonnummer</string>
   <!-- Toasts for various transient network events -->
   <!-- Toast text for Unconditional Call Forwarding enabled  -->
   <string name="call_notif_unconditionalCF">Dauerhafte Anrufweiterleitung ist aktiviert</string>
@@ -149,6 +150,7 @@
   <string name="cb_psw_dont_match">Passwörter stimmen nicht überein</string>
   <!-- FDN settings: error message displayed in a popup (toast) -->
   <string name="fdn_invalid_number_cm">Rufnummernbeschränkung wurde nicht aktualisiert, da die Nummer entweder leer ist oder 20 Ziffern überschreitet.</string>
+  <string name="fdn_service_unavailable">FDN-Dienst ist nicht verfügbar.</string>
   <!-- Title of the activity shown for Exporting contacts to SIM.  -->
   <string name="exportContacts">Kontakte werden auf die SIM-Karte exportiert\u2026</string>
   <!-- Title of the List shown for SIM Contacts Management Activity.  -->
@@ -194,4 +196,9 @@
   <string name="choose_network_mode_system_default">Systemstandard</string>
   <!-- Error message displayed on SIM Network Depersonalization panel with # of retries remaining -->
   <string name="unlock_failed_remaining_retries">Die Anforderung zum Entsperren war nicht erfolgreich. Es verbleiben %1$d Versuche.</string>
+  <!-- Call forward: IMS: Media tag support -->
+  <string name="labelCFType">Einstellungen für die Anrufweiterleitung</string>
+  <string name="labelCFVoice">Stimme</string>
+  <string name="labelCFVideo">Video</string>
+  <string name="call_forward_option">Optionen für die Anrufweiterleitung</string>
 </resources>
